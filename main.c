@@ -39,13 +39,22 @@ void individuosIniciais(){
 
     while(n1 != -1 && n2 != -1){
 
-        printf("\nSelecione a posi��o (X, Y) do %d� indiv�duo\n", i);
+        printf("\n Selecione a posição (X, Y) do %dº indivíduo\n", i);
+        printf("    (Para terminar, selecione 99 nas duas posições)\n");
         scanf("%d", &n1);
         scanf("%d", &n2);
 
-        mapa[n1][n2].individuo.vivoMorto = '+';
-        mapa[n1][n2].individuo.estado = VIVO;
-        i++;
+        if((n1 > 10 || n2 > 10) || (n1 == 0 || n2 == 0))
+            printf("\nApenas valores de 1 a 10!\n");
+
+        else if(n1 < -1 || n2 < -1)
+            printf("\nNão são permitidos números negativos!\n");
+
+        else{
+            mapa[n1][n2].individuo.vivoMorto = '+';
+            mapa[n1][n2].individuo.estado = VIVO;
+            i++;
+        }
     }
 
 }
