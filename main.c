@@ -39,7 +39,7 @@ void individuosIniciais(){
 
     while(n1 != -1 && n2 != -1){
 
-        printf("\n Selecione a posição (X, Y) do %dº indivíduo\n", i);
+        printf("\n Selecione a posição (X, Y) do %dº indivíduo,no intervalo de 1 a 10\n", i);
         printf("    (Para terminar, selecione 99 nas duas posições)\n");
         scanf("%d", &n1);
         scanf("%d", &n2);
